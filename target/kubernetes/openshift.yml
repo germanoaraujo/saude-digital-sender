@@ -3,9 +3,9 @@ apiVersion: "v1"
 kind: "ServiceAccount"
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
     app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+    app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
@@ -17,9 +17,9 @@ apiVersion: "v1"
 kind: "Service"
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
     app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+    app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
@@ -40,9 +40,9 @@ apiVersion: "image.openshift.io/v1"
 kind: "ImageStream"
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
     app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+    app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
@@ -55,9 +55,9 @@ apiVersion: "image.openshift.io/v1"
 kind: "ImageStream"
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
     app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+    app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
@@ -71,9 +71,9 @@ apiVersion: "build.openshift.io/v1"
 kind: "BuildConfig"
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
     app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+    app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
@@ -97,9 +97,9 @@ apiVersion: "apps.openshift.io/v1"
 kind: "DeploymentConfig"
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
     app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+    app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
@@ -114,9 +114,9 @@ spec:
   template:
     metadata:
       annotations:
-        app.quarkus.io/build-timestamp: "2020-05-16 - 20:03:51 +0000"
+        app.quarkus.io/build-timestamp: "2020-05-16 - 21:23:43 +0000"
         app.openshift.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-        app.quarkus.io/commit-id: "073f588fdbe61998806661b6745244ec3143e1a7"
+        app.quarkus.io/commit-id: "05f7eb1984eb4c9c1ff2b0faa3fa4424f0b04cee"
         app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
       labels:
         app.kubernetes.io/name: "saude-digital-sender"
