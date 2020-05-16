@@ -13,13 +13,13 @@ public class Sender extends RouteBuilder {
 	public void configure() throws Exception {
 		// TODO Auto-generated method stub
 
-		JacksonDataFormat jacksonDataFormat = new JacksonDataFormat();
-    	jacksonDataFormat.setUnmarshalType(SingalInput.class);
-    
+		//JacksonDataFormat jacksonDataFormat = new JacksonDataFormat();
+    	//jacksonDataFormat.setUnmarshalType(SingalInput.class);
+		
 	
     from("timer:sender?period=6000")
-	  .setBody(method(this, "genRandoSingalInput()"))
-	  .marshal(jacksonDataFormat)
+	  .setBody(method(this, "genRandoSingalInput().toString()"))
+	  //.marshal(jacksonDataFormat)
 	  //.setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
 	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
       .log("${body}")
