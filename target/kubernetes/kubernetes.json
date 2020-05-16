@@ -4,8 +4,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
-      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
-      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 20:03:51 +0000",
+      "app.quarkus.io/commit-id" : "073f588fdbe61998806661b6745244ec3143e1a7"
     },
     "labels" : {
       "app.kubernetes.io/name" : "saude-digital-sender",
@@ -19,8 +19,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
-      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
-      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 20:03:51 +0000",
+      "app.quarkus.io/commit-id" : "073f588fdbe61998806661b6745244ec3143e1a7"
     },
     "labels" : {
       "app.kubernetes.io/name" : "saude-digital-sender",
@@ -46,8 +46,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
-      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
-      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 20:03:51 +0000",
+      "app.quarkus.io/commit-id" : "073f588fdbe61998806661b6745244ec3143e1a7"
     },
     "labels" : {
       "app.kubernetes.io/name" : "saude-digital-sender",
@@ -67,8 +67,8 @@
       "metadata" : {
         "annotations" : {
           "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
-          "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
-          "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+          "app.quarkus.io/build-timestamp" : "2020-05-16 - 20:03:51 +0000",
+          "app.quarkus.io/commit-id" : "073f588fdbe61998806661b6745244ec3143e1a7"
         },
         "labels" : {
           "app.kubernetes.io/name" : "saude-digital-sender",

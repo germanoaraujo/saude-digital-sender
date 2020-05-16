@@ -24,7 +24,7 @@ public class Sender extends RouteBuilder {
       .marshal(jacksonDataFormat)
 	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
       .log("${body}")
-      .to("log:test");
+      .to("knative:endpoint/virus-dispatcher");
 		
 	}
 
