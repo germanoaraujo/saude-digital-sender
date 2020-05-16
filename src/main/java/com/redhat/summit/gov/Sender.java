@@ -18,7 +18,7 @@ public class Sender extends RouteBuilder {
     
 	
     from("timer:sender?period=3000")
-	  .setBody(method(this, "genRandoSingalInput().toString()"))
+	  .setBody(method(this, "genRandoSingalInput()"))
 	  .marshal(jacksonDataFormat)
 	  //.setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
       .marshal(jacksonDataFormat)
