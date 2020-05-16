@@ -1,0 +1,201 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "ServiceAccount",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.openshift.io/runtime" : "quarkus"
+    },
+    "name" : "saude-digital-sender"
+  }
+}{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.openshift.io/runtime" : "quarkus"
+    },
+    "name" : "saude-digital-sender"
+  },
+  "spec" : {
+    "ports" : [ {
+      "name" : "http",
+      "port" : 8080,
+      "targetPort" : 8080
+    } ],
+    "selector" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+    },
+    "type" : "ClusterIP"
+  }
+}{
+  "apiVersion" : "image.openshift.io/v1",
+  "kind" : "ImageStream",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.openshift.io/runtime" : "quarkus"
+    },
+    "name" : "saude-digital-sender"
+  },
+  "spec" : { }
+}{
+  "apiVersion" : "image.openshift.io/v1",
+  "kind" : "ImageStream",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.openshift.io/runtime" : "quarkus"
+    },
+    "name" : "ubi-quarkus-native-binary-s2i"
+  },
+  "spec" : {
+    "dockerImageRepository" : "quay.io/quarkus/ubi-quarkus-native-binary-s2i"
+  }
+}{
+  "apiVersion" : "build.openshift.io/v1",
+  "kind" : "BuildConfig",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.openshift.io/runtime" : "quarkus"
+    },
+    "name" : "saude-digital-sender"
+  },
+  "spec" : {
+    "output" : {
+      "to" : {
+        "kind" : "ImageStreamTag",
+        "name" : "saude-digital-sender:1.0.0-SNAPSHOT"
+      }
+    },
+    "source" : {
+      "binary" : { }
+    },
+    "strategy" : {
+      "sourceStrategy" : {
+        "from" : {
+          "kind" : "ImageStreamTag",
+          "name" : "ubi-quarkus-native-binary-s2i:19.3.0"
+        }
+      }
+    }
+  }
+}{
+  "apiVersion" : "apps.openshift.io/v1",
+  "kind" : "DeploymentConfig",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.openshift.io/runtime" : "quarkus"
+    },
+    "name" : "saude-digital-sender"
+  },
+  "spec" : {
+    "replicas" : 1,
+    "selector" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+    },
+    "template" : {
+      "metadata" : {
+        "annotations" : {
+          "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+          "app.openshift.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+          "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867",
+          "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git"
+        },
+        "labels" : {
+          "app.kubernetes.io/name" : "saude-digital-sender",
+          "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+          "app.openshift.io/runtime" : "quarkus"
+        }
+      },
+      "spec" : {
+        "containers" : [ {
+          "env" : [ {
+            "name" : "KUBERNETES_NAMESPACE",
+            "valueFrom" : {
+              "fieldRef" : {
+                "fieldPath" : "metadata.namespace"
+              }
+            }
+          }, {
+            "name" : "JAVA_APP_JAR",
+            "value" : "/deployments/saude-digital-sender-1.0.0-SNAPSHOT-runner.jar"
+          }, {
+            "name" : "QUARKUS_HOME",
+            "value" : "/home/quarkus/"
+          }, {
+            "name" : "QUARKUS_OPTS",
+            "value" : "-Dquarkus.http.host=0.0.0.0"
+          } ],
+          "image" : "gedasilv/saude-digital-sender:1.0.0-SNAPSHOT",
+          "imagePullPolicy" : "Always",
+          "name" : "saude-digital-sender",
+          "ports" : [ {
+            "containerPort" : 8080,
+            "name" : "http",
+            "protocol" : "TCP"
+          } ]
+        } ],
+        "serviceAccount" : "saude-digital-sender"
+      }
+    },
+    "triggers" : [ {
+      "imageChangeParams" : {
+        "automatic" : true,
+        "containerNames" : [ "saude-digital-sender" ],
+        "from" : {
+          "kind" : "ImageStreamTag",
+          "name" : "saude-digital-sender:1.0.0-SNAPSHOT"
+        }
+      },
+      "type" : "ImageChange"
+    } ]
+  }
+}

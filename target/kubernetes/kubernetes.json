@@ -1,0 +1,101 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "ServiceAccount",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+    },
+    "name" : "saude-digital-sender"
+  }
+}{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+    },
+    "name" : "saude-digital-sender"
+  },
+  "spec" : {
+    "ports" : [ {
+      "name" : "http",
+      "port" : 8080,
+      "targetPort" : 8080
+    } ],
+    "selector" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+    },
+    "type" : "ClusterIP"
+  }
+}{
+  "apiVersion" : "apps/v1",
+  "kind" : "Deployment",
+  "metadata" : {
+    "annotations" : {
+      "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+      "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+      "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+    },
+    "labels" : {
+      "app.kubernetes.io/name" : "saude-digital-sender",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+    },
+    "name" : "saude-digital-sender"
+  },
+  "spec" : {
+    "replicas" : 1,
+    "selector" : {
+      "matchLabels" : {
+        "app.kubernetes.io/name" : "saude-digital-sender",
+        "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+      }
+    },
+    "template" : {
+      "metadata" : {
+        "annotations" : {
+          "app.quarkus.io/vcs-url" : "https://github.com/germanoaraujo/saude-digital-sender.git",
+          "app.quarkus.io/build-timestamp" : "2020-05-16 - 12:38:23 +0000",
+          "app.quarkus.io/commit-id" : "52dd876e3f203147f6c2322cf361be147cf32867"
+        },
+        "labels" : {
+          "app.kubernetes.io/name" : "saude-digital-sender",
+          "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+        }
+      },
+      "spec" : {
+        "containers" : [ {
+          "env" : [ {
+            "name" : "KUBERNETES_NAMESPACE",
+            "valueFrom" : {
+              "fieldRef" : {
+                "fieldPath" : "metadata.namespace"
+              }
+            }
+          } ],
+          "image" : "gedasilv/saude-digital-sender:1.0.0-SNAPSHOT",
+          "imagePullPolicy" : "Always",
+          "name" : "saude-digital-sender",
+          "ports" : [ {
+            "containerPort" : 8080,
+            "name" : "http",
+            "protocol" : "TCP"
+          } ]
+        } ],
+        "serviceAccount" : "saude-digital-sender"
+      }
+    }
+  }
+}

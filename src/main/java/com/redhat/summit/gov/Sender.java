@@ -16,30 +16,19 @@ public class Sender extends RouteBuilder {
 		JacksonDataFormat jacksonDataFormat = new JacksonDataFormat();
     jacksonDataFormat.setUnmarshalType(SingalInput.class);
     
-
-    from("timer:foo?period=3000")
-      //.setBody(method(this, "genRandoSingalInput()"))
-      //.marshal(jacksonDataFormat)
-      .setHeader("CE-Type", constant("dev.knative.humancontact"))
+	
+    from("timer:sender?period=3000")
+	  //.setBody().method(this, "genRandoSingalInput()")
+	  //.bean(beanType)
+	  .setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
+      .marshal(jacksonDataFormat)
+	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
       .log("${body}")
       .to("log:test");
 		
 	}
 
-	public static SingalInput genRandoSingalInput(){
-
-		SingalInput input = new SingalInput();
-		Random generator = new Random();
-		String[] genuses = {"Alphacoronavirus","Betacoronavirus","MERSvirus","Novalvirus"};
-		//
-		int randomIndex = generator.nextInt(genuses.length);
-  
-		input.setType("Virus");
-		input.setGenuses(genuses[randomIndex]);
-		 
-		return input;
-	}
-  
+	
 	public static class SingalInput {
   
 	  String type;
