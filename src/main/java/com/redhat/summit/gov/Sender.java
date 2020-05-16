@@ -18,13 +18,15 @@ public class Sender extends RouteBuilder {
     
 	
     from("timer:sender?period=3000")
-	  //.setBody(method(this, "genRandoSingalInput().toString()"))
-	  //.marshal(jacksonDataFormat)
-	  .setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
+	  .setBody(method(this, "genRandoSingalInput().toString()"))
+	  .marshal(jacksonDataFormat)
+	  //.setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
       .marshal(jacksonDataFormat)
 	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
       .log("${body}")
-    .to("kafka:my-topic?brokers=my-cluster-kafka-bootstrap.demo-saude-digital-streams.svc:9092");
+	.to("kafka:my-topic?brokers=my-cluster-kafka-bootstrap.demo-saude-digital-streams.svc:9092");
+	
+	
 		
 	}
 
