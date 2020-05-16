@@ -4,8 +4,8 @@ kind: "ServiceAccount"
 metadata:
   annotations:
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/build-timestamp: "2020-05-16 - 22:48:56 +0000"
-    app.quarkus.io/commit-id: "a04a849f49f4a47595ac42cb0b272d1d9004eb4f"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 23:10:55 +0000"
+    app.quarkus.io/commit-id: "afe744ae0c00e6fbae85d8a970c4e4b5a9cb4191"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
     app.kubernetes.io/version: "1.0.0-SNAPSHOT"
@@ -16,8 +16,8 @@ kind: "Service"
 metadata:
   annotations:
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/build-timestamp: "2020-05-16 - 22:48:56 +0000"
-    app.quarkus.io/commit-id: "a04a849f49f4a47595ac42cb0b272d1d9004eb4f"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 23:10:55 +0000"
+    app.quarkus.io/commit-id: "afe744ae0c00e6fbae85d8a970c4e4b5a9cb4191"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
     app.kubernetes.io/version: "1.0.0-SNAPSHOT"
@@ -37,8 +37,8 @@ kind: "Deployment"
 metadata:
   annotations:
     app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-    app.quarkus.io/build-timestamp: "2020-05-16 - 22:48:56 +0000"
-    app.quarkus.io/commit-id: "a04a849f49f4a47595ac42cb0b272d1d9004eb4f"
+    app.quarkus.io/build-timestamp: "2020-05-16 - 23:10:55 +0000"
+    app.quarkus.io/commit-id: "afe744ae0c00e6fbae85d8a970c4e4b5a9cb4191"
   labels:
     app.kubernetes.io/name: "saude-digital-sender"
     app.kubernetes.io/version: "1.0.0-SNAPSHOT"
@@ -53,8 +53,8 @@ spec:
     metadata:
       annotations:
         app.quarkus.io/vcs-url: "https://github.com/germanoaraujo/saude-digital-sender.git"
-        app.quarkus.io/build-timestamp: "2020-05-16 - 22:48:56 +0000"
-        app.quarkus.io/commit-id: "a04a849f49f4a47595ac42cb0b272d1d9004eb4f"
+        app.quarkus.io/build-timestamp: "2020-05-16 - 23:10:55 +0000"
+        app.quarkus.io/commit-id: "afe744ae0c00e6fbae85d8a970c4e4b5a9cb4191"
       labels:
         app.kubernetes.io/name: "saude-digital-sender"
         app.kubernetes.io/version: "1.0.0-SNAPSHOT"

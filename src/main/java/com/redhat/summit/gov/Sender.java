@@ -17,11 +17,10 @@ public class Sender extends RouteBuilder {
     	jacksonDataFormat.setUnmarshalType(SingalInput.class);
     
 	
-    from("timer:sender?period=3000")
+    from("timer:sender?period=6000")
 	  .setBody(method(this, "genRandoSingalInput()"))
 	  .marshal(jacksonDataFormat)
 	  //.setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
-      .marshal(jacksonDataFormat)
 	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
       .log("${body}")
 	.to("kafka:my-topic?brokers=my-cluster-kafka-bootstrap.demo-saude-digital-streams.svc:9092");
