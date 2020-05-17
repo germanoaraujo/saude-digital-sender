@@ -18,7 +18,7 @@ public class Sender extends RouteBuilder {
 		
 	
     from("timer:sender?period=6000")
-	  .setBody(method(this, "genRandoSingalInput().toString()"))
+	  .setBody(method(this, "genRandoSingalInput()"))
 	  //.marshal(jacksonDataFormat)
 	  //.setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
 	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
@@ -29,7 +29,7 @@ public class Sender extends RouteBuilder {
 		
 	}
 
-	public static SingalInput genRandoSingalInput(){
+	public String  genRandoSingalInput(){
 
 		SingalInput input = new SingalInput();
 		Random generator = new Random();
@@ -39,8 +39,8 @@ public class Sender extends RouteBuilder {
   
 		input.setType("Virus");
 		input.setGenuses(genuses[randomIndex]);
-		 
-		return input;
+		
+		return input.toString();
 	}
 	public static class SingalInput {
   
