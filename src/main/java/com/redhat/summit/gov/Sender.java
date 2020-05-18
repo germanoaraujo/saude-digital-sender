@@ -13,14 +13,14 @@ public class Sender extends RouteBuilder {
 	public void configure() throws Exception {
 		// TODO Auto-generated method stub
 
-		//JacksonDataFormat jacksonDataFormat = new JacksonDataFormat();
-    	//jacksonDataFormat.setUnmarshalType(SingalInput.class);
+		JacksonDataFormat jacksonDataFormat = new JacksonDataFormat();
+    	jacksonDataFormat.setUnmarshalType(SingalInput.class);
 		
 	
     from("timer:sender?period=6000")
-	  .setBody(method(this, "genRandoSingalInput()"))
-	  //.marshal(jacksonDataFormat)
-	  //.setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
+	  //.setBody(method(this, "genRandoSingalInput()"))
+	  .marshal(jacksonDataFormat)
+	  .setBody().simple("Type:[Virus] Genuses:[MERSvirus]")
 	  .setHeader("CE-Type", constant("dev.knative.humancontact"))
       .log("${body}")
 	.to("kafka:my-topic?brokers=my-cluster-kafka-bootstrap.demo-saude-digital-streams.svc:9092");
@@ -28,7 +28,7 @@ public class Sender extends RouteBuilder {
 	
 		
 	}
-
+	/*
 	public String  genRandoSingalInput(){
 
 		SingalInput input = new SingalInput();
@@ -42,6 +42,22 @@ public class Sender extends RouteBuilder {
 		
 		return input.toString();
 	}
+	*/
+
+	public static SingalInput genRandoSingalInput(){
+
+		SingalInput input = new SingalInput();
+		Random generator = new Random();
+		String[] genuses = {"Alphacoronavirus","Betacoronavirus","MERSvirus","Novalvirus"};
+		//
+		int randomIndex = generator.nextInt(genuses.length);
+  
+		input.setType("Virus");
+		input.setGenuses(genuses[randomIndex]);
+		 
+		return input;
+	}
+	
 	public static class SingalInput {
   
 	  String type;
